@@ -24,15 +24,15 @@ app.set('view engine', 'ejs');
 app.use('/static', express.static('public'));
 
 app.get('/', (req, res) => {
-  res.render('home');
+  res.render('pages/home');
 });
 
 app.get('/hello/:name', (req, res) => {
-  res.render('hello', { name: req.params.name });
+  res.render('pages/hello', { name: req.params.name });
 });
 
 app.get('/posts', (req, res) => {
-  res.render('posts-list', { posts: mockArticles });
+  res.render('pages/posts-list', { posts: mockArticles });
 });
 
 app.listen(port, () => {
