@@ -14,5 +14,5 @@ app.get('/hello/:name', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Serveur lancé sur le port ${port}`);
+  console.log(`Server is running on port ${port}`);
 });
