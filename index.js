@@ -9,6 +9,10 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
+app.get('/hello/:name', (req, res) => {
+  res.render('hello', { name: req.params.name });
+});
+
 app.listen(port, () => {
   console.log(`Serveur lancé sur le port ${port}`);
 });
